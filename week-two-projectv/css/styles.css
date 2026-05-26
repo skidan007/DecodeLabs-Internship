@@ -1,0 +1,262 @@
+/* =========================
+   Global Styles
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222222;
+    background-color: #f4f4f4;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+}
+
+.container {
+    width: min(90%, 1200px);
+    margin-inline: auto;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+p,
+a {
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+}
+
+
+
+/* =========================
+   Header
+========================= */
+
+.header {
+    background-color: #111827;
+    color: #ffffff;
+    padding: 0.15rem 0;
+    /* position: sticky;
+    top: 0; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+} 
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+} 
+
+.navigation-wrapper {
+    position: relative;
+}
+
+.navigation-toggle {
+    display: none;
+}
+
+.navigation-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.35rem;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0.75rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: #1f2937;
+}
+
+.navigation-button span {
+    width: 1.5rem;
+    height: 0.15rem;
+    background-color: #ffffff;
+    border-radius: 999px;
+}
+
+.site-navigation {
+    display: none;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    width: 14rem;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.navigation-toggle:checked + .navigation-button + .site-navigation {
+    display: block;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #111827;
+    font-weight: 600;
+    display: block;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list a:hover {
+    text-decoration: none;
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero-section {
+    padding: 12rem 0;
+    background-color: #ffffff;
+
+}
+
+/* .hero-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+} */
+
+.hero-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+
+.primary-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    min-height: 48px;
+    padding: 1rem 1.5rem;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 0.5rem;
+}
+
+.primary-button:hover {
+    background-color: #1d4ed8;
+}
+
+/* =========================
+   About Section
+========================= */
+.about-section,
+.services-section {
+    padding: 4rem 0;
+}
+
+.about-content,
+.service-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+}
+
+.about-content {
+    padding: 2rem;
+}
+
+
+
+/* =========================
+   Services Section
+========================= */
+
+
+.services-section h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.service-card:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.site-footer {
+    background-color: #111827;
+    color: #ffffff;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
