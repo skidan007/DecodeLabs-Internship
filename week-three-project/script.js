@@ -21,6 +21,10 @@ const heroButton = document.querySelector(".primary-button");
 
 heroButton.addEventListener("click", () => {
     headingText.textContent = "Thanks for Exploring Our Services!";
+
+    setTimeout(() => {
+        headingText.textContent = "Welcome to Modern Web Solutions";
+    }, 3000);
 });
 
 // =========================
