@@ -36,14 +36,14 @@ serviceCards.forEach((card) => {
         serviceTitle.style.color = "#007BFF";
         card.style.transform = "translateY(-8px)";
         card.style.transition = "0.3s ease";
-        card.style.fontWeight = "bold";
+        // card.style.fontWeight = "bold";
         // card.style.color = "#007BFF";
     });
 
     card.addEventListener("mouseleave", () => {
         const serviceTitle = card.querySelector("h3");
         card.style.transform = "translateY(0)";
-        card.style.fontWeight = "normal";
+        // card.style.fontWeight = "normal";
         serviceTitle.style.color = "#111827";
     });
 
