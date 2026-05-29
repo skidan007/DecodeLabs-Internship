@@ -12,9 +12,8 @@ navigationLinks.forEach((link) => {
 });
 
 // =========================
-// Dynamic Hero Button Interaction
+// Dynamic Hero/Button Interaction
 // =========================
-
 
 const headingText = document.querySelector(".hero-text h2");
 const heroButton = document.querySelector(".primary-button");
@@ -27,6 +26,21 @@ heroButton.addEventListener("click", () => {
     }, 3000);
 });
 
+
+const paragraph = document.querySelector(".typewriter p");
+
+const texts = [
+    "Welcome to our website!",
+    "We offer amazing services.",
+    "Learn frontend development step by step.",
+    "Join us and build real projects.",
+    "Keep improving your coding skills!"
+];
+
+setInterval(() => {
+    const randomIndex = Math.floor(Math.random() * texts.length);
+    paragraph.textContent = texts[randomIndex];
+}, 3000);
 // =========================
 // Service Card Interaction
 // =========================
